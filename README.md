@@ -1,5 +1,5 @@
 # simpleNotes
-https://simplenotes123.netlify.com/
+# demo: https://simplenotes123.netlify.com/
 
 ## Project setup
 ```
