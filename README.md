@@ -1,4 +1,4 @@
-# simpleNotes
+# Vue app for making simple notes
 # demo: https://simplenotes123.netlify.com/
 
 ## Project setup
