@@ -1,33 +1,37 @@
 <template>
   <div>
-    <div class="container">
-      <div class="row form">
-        <form class="col s12" id="inputFields">
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">mode_edit</i>
-              <textarea v-model="noteTitle"
-                        id="icon_prefix2"
-                        class="materialize-textarea">
-              </textarea>
-              <label for="icon_prefix2">Note title</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">note</i>
-              <textarea v-model="noteVal" id="icon_prefix2" class="materialize-textarea"></textarea>
-              <label for="icon_prefix2">Note text</label>
-              <span id="errorMesagge"
-                    v-if="!valid">
-                    Can't add note. Note must have title and note text!
-              </span>
-              <div class="col s12">
-                <a @click="addNote()" class="waves-effect waves-light btn add">add note</a>
+    <div id="component">
+      <div class="container">
+        <div class="row form">
+          <form class="col s12" id="inputFields">
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">mode_edit</i>
+                <textarea v-model="noteTitle"
+                          id="icon_prefix2"
+                          class="materialize-textarea">
+                </textarea>
+                <label for="icon_prefix2">Note title</label>
               </div>
             </div>
-          </div>
-        </form>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">note</i>
+                <textarea v-model="noteVal" id="icon_prefix2"
+                          class="materialize-textarea">
+                </textarea>
+                <label for="icon_prefix2">Note text</label>
+                <span id="errorMesagge"
+                      v-if="!valid">
+                      Can't add note. Note must have title and note text!
+                </span>
+                <div class="col s12">
+                  <a @click="addNote()" class="waves-effect waves-light btn add">add note</a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -90,14 +94,46 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  .container{
-    margin-top: 50px;
-    border: 3px inset #26a69a;
-  }
-  .form{
-    padding: 20px;
+body{
+  width: 100%;
+}
+  #component{
+    padding: 30px;
     margin: 0;
-    z-index: 0;
+    // position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    //background-image: url('../assets/back.jpg');
+  }
+  .container{
+    margin-top: 20px;
+    border: 4px inset #E5002D;
+    background-color: rgba(229, 255, 255, 0.7);
+    form{
+      color: #E5002D;
+      z-index: 0;
+      padding-top: 20px;
+      label{
+        color: black !important;
+      }
+      textarea{
+        border-bottom-color: black;
+      }
+    }
+  }
+  .input-field textarea{
+    border-bottom: 1px solid #E5002D !important;
+  }
+  .input-field textarea:focus + label {
+    color: #000;
+  }
+  .input-field textarea:focus {
+    border-bottom: 2px solid #45D500 !important;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  .input-field .prefix.active {
+    color: #45D500;
   }
   a{
     z-index: 0;
@@ -108,7 +144,15 @@ export default {
   .add{
     margin-top: 20px;
     width: 30%;
+    background-color: #E5002D;
+    color: #45D500;
+    &:hover{
+      color: #E5002D;
+      background-color: #45D500;
+      font-weight: bold;
+    }
   }
+
   #errorMesagge{
     color: red;
   }

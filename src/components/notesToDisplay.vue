@@ -1,5 +1,5 @@
 <template>
-<div>
+<div id="component">
   <div class="container">
     <div class="row">
       <div v-for="(note, index) in notes" :key="index" class="col l3 m3 s12">
@@ -27,9 +27,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .container{
-    margin-top: 50px;
-  }
+body{
+  height: 100%;
+}
+#component{
+  padding-top: 20px;
+  top: auto;
+  width: 100%;
+  border-top: 5px solid #45D500;
+}
+
   .col{
     margin-left: 55px !important;
   }

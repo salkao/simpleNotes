@@ -87,31 +87,45 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media only screen and (max-width : 1500px) {
-  .card{
-    width: 200px !important;
+  @media only screen and (max-width : 1500px) {
+    .card{
+      width: 200px !important;
+    }
   }
-}
-@media only screen and (max-width : 500px) {
-  .card{
-    width: 300px !important;
+  @media only screen and (max-width : 500px) {
+    .card{
+      width: 300px !important;
+    }
   }
-}
-.col{
-  width: 300px;
-}
-.card{
-  width: 300px;
-  background-color: #036B60 !important;
-  word-wrap: break-word;
-}
-.textArea{
-  overflow-y: auto;
-}
-#text{
-  margin-top: 40px;
-}
-.card-title{
-  border-bottom: 1px solid aquamarine;
-}
+  .col{
+    width: 300px;
+  }
+
+  .card{
+    width: 300px;
+    background-color: #E5002D;
+    word-wrap: break-word;
+    background-size: 100%;
+  }
+  .textArea{
+    overflow-y: auto;
+  }
+  #text{
+    margin-top: 40px;
+  }
+  .card-title{
+    border-bottom: 1px solid #45D500;
+  }
+  .card-action{
+    border-top-color: #45D500 !important;
+    a{
+      color: #45D500 !important;
+      &:hover{
+        font-weight: bold;
+      }
+    }
+  }
+  .input-field .prefix.active {
+    color: #45D500;
+  }
 </style>

@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col s6 m6 l6">
             <img src="../assets/note.png" alt="" width="40px" height="40px">
-            <span id="logoText">SimpleNotes</span>
+            <span id="logoText">Simple<span id="textNotes">Notes</span> </span>
           </div>
           <div class="col s6 m6 l6">
               <a @click="removeAllNotes()"
@@ -32,7 +32,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   nav{
-    background: linear-gradient(to bottom,#003C36, rgb(46, 138, 129));
+    //background: linear-gradient(to bottom,#003C36, rgb(46, 138, 129));
+    background-color: #E5002D;
     position: fixed;
   }
   img{
@@ -45,5 +46,18 @@ export default {
     margin-left: 80px;
     float: left;
     font-size: 26px;
+    color: #45D500;
+    font-weight: bolder;
+    span{
+      color: #ffffff;
+      font-weight: lighter;
+    }
+  }
+  #deleteBtn{
+    color: #E5002D;
+    background-color: #45D500;
+    &:hover{
+      font-weight: bolder;
+    }
   }
 </style>
