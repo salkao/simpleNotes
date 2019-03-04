@@ -115,7 +115,6 @@ export default {
   }
   .navControls{
     height: 62.5px;
-    float: right;
     width: 50%;
     .col{
       width: 50% !important;
