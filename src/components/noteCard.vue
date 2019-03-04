@@ -26,11 +26,9 @@
             </div>
           </div>
         </div>
-        <div class="card-action">
-          <a @click="removeNote(Index)" href="#">Remove</a>
-          <a @click="enableEditing" href="#">Edit</a>
-          <a v-if="editing" @click="saveEdit(Index)" href="#">Save</a>
-        </div>
+          <a class="buttons" @click="removeNote(Index)" href="#">Remove</a>
+          <a class="buttons" @click="enableEditing" href="#">Edit</a>
+          <a class="buttons" v-if="editing" @click="saveEdit(Index)" href="#">Save</a>
       </div>
     </div>
   </div>
@@ -105,7 +103,8 @@ export default {
     width: 300px;
     background-color: #E5002D;
     word-wrap: break-word;
-    background-size: 100%;
+    border-radius: 50% 20% / 10% 40% !important;
+    padding: 10px;
   }
   .textArea{
     overflow-y: auto;
@@ -116,14 +115,12 @@ export default {
   .card-title{
     border-bottom: 1px solid #45D500;
   }
-  .card-action{
-    border-top-color: #45D500 !important;
-    a{
+  .buttons{
       color: #45D500 !important;
       &:hover{
         font-weight: bold;
       }
-    }
+      padding-left: 10px;
   }
   .input-field .prefix.active {
     color: #45D500;
