@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import { filter } from 'lodash';
 import noteCard from './noteCard.vue';
 
 export default {
@@ -20,7 +21,11 @@ export default {
   },
   computed: {
     notes() {
-      return this.$store.getters.notes;
+      if (this.$store.getters.search === '') {
+        return this.$store.getters.notes;
+      }
+      return _.filter(this.$store.getters.notes,
+        note => note.title.toUpperCase() === this.$store.getters.search.toUpperCase());
     },
   },
 };

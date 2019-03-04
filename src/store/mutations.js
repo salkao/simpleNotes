@@ -17,4 +17,8 @@ export default {
     // eslint-disable-next-line
     state.notes[index] = newNote;
   },
+  [types.SEARCHED_NOTE](state, newSearch) {
+    // eslint-disable-next-line
+    state.search = newSearch;
+  },
 };

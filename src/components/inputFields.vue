@@ -108,7 +108,7 @@ body{
   }
   .container{
     margin-top: 20px;
-    border: 4px inset #E5002D;
+    //border: 4px inset #E5002D;
     background-color: rgba(229, 255, 255, 0.7);
     form{
       color: #E5002D;

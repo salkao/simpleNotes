@@ -13,10 +13,7 @@ export default {
   saveEdit({ commit }, index, newNote) {
     commit(types.SAVE_EDIT, index, newNote);
   },
-  showTrue({ commit }) {
-    commit(types.SHOW_TRUE);
-  },
-  showFalse({ commit }) {
-    commit(types.SHOW_FALSE);
+  searchedNote({ commit }, newSearch) {
+    commit(types.SEARCHED_NOTE, newSearch);
   },
 };

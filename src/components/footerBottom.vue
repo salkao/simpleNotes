@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="footer">
-
+      <p>&copy; Copyright 2019, Simple Notes. All rights reserved.</p>
     </div>
   </div>
 </template>
@@ -20,5 +20,11 @@ export default {
     height: 30px;
     bottom: 0;
     background-color: #E5002D;
+    padding: 0;
+  }
+  p{
+    color: #45D500;
+    padding: 3px;
+    margin: 0;
   }
 </style>

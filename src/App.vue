@@ -52,7 +52,7 @@ body{
 }
 .full{
   width: 100%;
-  border-bottom: 6px solid #E5002D;
+  border-bottom: 10px solid #E5002D;
 }
 #app {
   position: absolute;
