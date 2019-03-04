@@ -88,6 +88,7 @@ export default {
     cursor: pointer;
   }
   #logoText{
+    position: absolute;
     margin-left: 80px;
     float: left;
     font-size: 40px;
